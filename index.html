@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Plan workouts from your equipment, target muscles, time and intensity, then train with tap-to-cross-off sets and automatic timers.">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Set by Set">
@@ -49,6 +53,8 @@ button{font:inherit;color:inherit}
 .brand{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-bottom:14px}
 .logo{font:800 32px/1 var(--f-display);text-transform:uppercase;letter-spacing:.01em;margin:0}
 .logo span{color:var(--accent)}
+.logo{display:flex;align-items:center;gap:10px}
+.emblem{width:40px;height:40px;flex:none;border-radius:9px}
 .steps{display:flex;gap:4px;margin:0;padding:0;list-style:none}
 .step{appearance:none;border:1px solid var(--line);background:transparent;color:var(--muted);font:600 12px/1 var(--f-body);text-transform:uppercase;letter-spacing:.08em;padding:8px 11px;border-radius:999px;cursor:pointer}
 .step b{font-family:var(--f-mono);margin-right:5px}
@@ -209,7 +215,7 @@ input[type=range]{width:100%;accent-color:var(--accent);height:28px}
 <body>
 <div class="app">
   <header class="brand">
-    <h1 class="logo">Set <span>by</span> Set</h1>
+    <h1 class="logo"><svg class="emblem" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="112" fill="#121821"/><circle cx="256" cy="256" r="200" fill="#1d5bd8"/><g fill="#fff" transform="translate(256 256) rotate(-35) scale(.86)"><rect x="-110" y="-17" width="220" height="34" rx="10"/><rect x="-140" y="-80" width="44" height="160" rx="14"/><rect x="96" y="-80" width="44" height="160" rx="14"/><rect x="-183" y="-56" width="34" height="112" rx="12"/><rect x="149" y="-56" width="34" height="112" rx="12"/></g></svg>Set <span>by</span> Set</h1>
     <ol class="steps" id="steps"></ol>
   </header>
   <main id="view"></main>
